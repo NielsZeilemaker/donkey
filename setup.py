@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+rom setuptools import setup, find_packages
 
 import os
 
@@ -12,7 +12,7 @@ def package_files(directory, strip_leading):
     return paths
 
 car_templates=['templates/*']
-web_controller_html = package_files('donkeycar/parts/web_controller/templates', 'donkeycar/management/tub_web', 'donkeycar/')
+web_controller_html = package_files('donkeycar/parts/web_controller/templates', 'donkeycar/') + package_files('donkeycar/management/tub_web', 'donkeycar/')
 
 extra_files = car_templates + web_controller_html
 print('extra_files', extra_files)
